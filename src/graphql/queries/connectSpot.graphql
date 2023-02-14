@@ -1,0 +1,84 @@
+query ConnectSpotById($id: ID!) {
+  connect_spot(id: $id) {
+    genres {
+      content
+      created_at
+      graphql_name
+      icon
+      id
+      name
+      status
+      updated_at
+    }
+    connect_spot_sdgs {
+      connect_spot_id
+      id
+      sdg {
+        content
+        created_at
+        graphql_name
+        icon
+        id
+        name
+        order
+        status
+        updated_at
+      }
+      sdg_id
+      status
+      updated_at
+    }
+    access
+    active_area_id
+    benefit
+    checked
+    connect_spot_images {
+      connect_spot_id
+      created_at
+      graphql_name
+      id
+      image
+      status
+      updated_at
+    }
+    content
+    created_at
+    discount
+    display_end
+    display_start
+    email
+    exchange_point
+    facebook
+    graphql_name
+    holiday
+    home_page
+    id
+    lat
+    line
+    lng
+    name
+    phone
+    post_code
+    spot_checked
+    spot_point_exchanges {
+      connect_spot_id
+      content
+      convert_type
+      created_at
+      end_date
+      graphql_name
+      id
+      start_date
+      status
+      title
+      updated_at
+      value
+    }
+    spot_type
+    status
+    town
+    twitter
+    updated_at
+    use_point
+  }
+}

@@ -1,0 +1,46 @@
+query StampRewards($where: Filter) {
+  stamp_rewards(where: $where, limit: 9999) {
+    check_user_stamp_reward
+    content
+    created_at
+    graphql_name
+    id
+    image
+    quantity
+    stamp_count
+    stamp_event_id
+    stamp_event {
+      city_id
+      prefecture_id
+    }
+    stamp_reward_images {
+      created_at
+      graphql_name
+      id
+      image
+      stamp_reward_id
+      status
+      updated_at
+    }
+    status
+    title
+    updated_at
+    user_stamp_rewards {
+      active_area_id
+      address
+      city_id
+      created_at
+      graphql_name
+      id
+      note
+      phone
+      post_code
+      prefecture_id
+      stamp_reward_id
+      status
+      updated_at
+      user_id
+    }
+    user_stamp_rewards_count
+  }
+}

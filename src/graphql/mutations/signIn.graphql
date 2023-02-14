@@ -1,0 +1,24 @@
+mutation adminSignIn($username: String!, $password: String!) {
+  sign_in(input: { attributes: { username: $username, password: $password } }) {
+    result
+    token
+    user {
+      id
+      avatar
+      name
+      occupation
+      role
+      email
+      nickname
+      phone_number
+      birthday
+      name_katakana
+      gender
+      active_area_id
+      address
+      organization_id
+      skill_ids
+      language_ids
+    }
+  }
+}

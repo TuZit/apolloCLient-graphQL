@@ -1,0 +1,47 @@
+query StampSpots($where: Filter) {
+  stamp_spots(where: $where, limit: 9999) {
+    access
+    address
+    created_at
+    description
+    facebook
+    genre
+    genres {
+      content
+      created_at
+      graphql_name
+      icon
+      id
+      name
+      status
+      updated_at
+    }
+    graphql_name
+    holiday_date
+    id
+    image
+    images
+    lat
+    line
+    lng
+    name
+    organization
+    position
+    stamp_event_id
+    stamp_spot_sdgs {
+      created_at
+      graphql_name
+      id
+      sdg_id
+      stamp_spot_id
+      status
+      updated_at
+    }
+    stamped_at
+    status
+    status_stamped
+    twitter
+    updated_at
+    url
+  }
+}

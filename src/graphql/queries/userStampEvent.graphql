@@ -1,0 +1,22 @@
+query UserStampEvents($where: Filter) {
+  user_stamp_events(where: $where, limit: 9999, offset: 0) {
+    user {
+      active_area {
+        name
+      }
+      name
+      age
+      address
+      email
+      gender
+      phone_number
+    }
+    created_at
+    rally_card_count
+    user_stamp_rewards {
+      stamp_reward {
+        title
+      }
+    }
+  }
+}

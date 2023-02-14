@@ -1,0 +1,75 @@
+query Mirai($id: ID!) {
+  mirai(id: $id) {
+    active_area_ids
+    approve
+    category
+    content
+    created_at
+    display_end_date
+    email
+    fee
+    graphql_name
+    id
+    maximum_users
+    mirai_images {
+      created_at
+      graphql_name
+      id
+      image
+      mirai_id
+      status
+      updated_at
+    }
+    mirai_sdgs {
+      created_at
+      graphql_name
+      id
+      mirai_id
+      sdg_id
+      updated_at
+    }
+    mirai_sdgs_attributes {
+      created_at
+      graphql_name
+      id
+      mirai_id
+      sdg_id
+      updated_at
+    }
+    name
+    organize_place
+    organizer
+    other_skill
+    pdf_info
+    phone_number
+    point
+    recruit_end_date
+    recruit_start_date
+    recruit_status
+    remark
+    request
+    reward
+    sdg_icon {
+      created_at
+      graphql_name
+      icon
+      id
+      name
+      updated_at
+    }
+    skill_ids
+    skills {
+      created_at
+      graphql_name
+      icon
+      id
+      name
+      updated_at
+    }
+    start_date
+    status
+    target_person
+    updated_at
+    user_mirai_progress
+  }
+}

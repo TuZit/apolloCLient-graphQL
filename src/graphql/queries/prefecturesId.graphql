@@ -1,0 +1,6 @@
+query prefecturesById($where: Filter) {
+  prefectures(where: $where, limit: 9999) {
+    id
+    name
+  }
+}

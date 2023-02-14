@@ -1,0 +1,14 @@
+query searchPostCode($where: Filter!) {
+  post_code(where: $where, limit: 9999) {
+    city_id
+    prefecture_id
+    created_at
+    graphql_name
+    id
+    name
+    name_kana
+    post_code
+    status
+    updated_at
+  }
+}

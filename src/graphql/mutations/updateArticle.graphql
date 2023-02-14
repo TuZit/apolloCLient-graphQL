@@ -1,0 +1,25 @@
+mutation UpdateArticle($articleUpdateData: ArticleInput!, $id: ID!) {
+  update_article(input: { attributes: $articleUpdateData, id: $id }) {
+    clientMutationId
+    graphql_name
+    returning {
+      category
+      city_ids
+      content
+      created_at
+      created_by
+      graphql_name
+      id
+      image1
+      image2
+      pdf_file
+      prefecture_id
+      publish_time
+      sender
+      status
+      title
+      updated_at
+      user_ids
+    }
+  }
+}

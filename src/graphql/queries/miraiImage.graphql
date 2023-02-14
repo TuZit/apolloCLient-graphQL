@@ -1,0 +1,11 @@
+query miraiImage($where: Filter) {
+  mirai_images(where: $where, limit: 9999) {
+    created_at
+    graphql_name
+    id
+    image
+    mirai_id
+    status
+    updated_at
+  }
+}

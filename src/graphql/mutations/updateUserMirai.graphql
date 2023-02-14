@@ -1,0 +1,10 @@
+mutation UpdateUserMirai($attributes: UserMiraiInput!, $id: ID!) {
+  update_user_mirai(input: { attributes: $attributes, id: $id }) {
+    returning {
+      id
+      progress
+      request_date
+      approved_date
+    }
+  }
+}

@@ -1,0 +1,16 @@
+query SpotPointExchanges($where: Filter, $connectSpotId: ID!) {
+  spot_point_exchanges(where: $where, limit: 9999, offset: 0, connect_spot_id: $connectSpotId) {
+    connect_spot_id
+    content
+    convert_type
+    created_at
+    end_date
+    graphql_name
+    id
+    start_date
+    status
+    title
+    updated_at
+    value
+  }
+}

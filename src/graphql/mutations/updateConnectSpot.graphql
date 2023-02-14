@@ -1,0 +1,22 @@
+mutation UpdateConnectSpot($connectSpotUpdateData: ConnectSpotInput!, $id: ID!) {
+  update_connect_spot(input: { attributes: $connectSpotUpdateData, id: $id }) {
+    clientMutationId
+    graphql_name
+    returning {
+      id
+      name
+      genres {
+        id
+        name
+        icon
+        content
+        created_at
+        updated_at
+      }
+      email
+      phone
+      sdg_ids
+      status
+    }
+  }
+}

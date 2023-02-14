@@ -1,0 +1,17 @@
+query ActiveAreaById($id: ID!) {
+  active_area(id: $id) {
+    banner
+    city_id
+    click_count
+    created_at
+    graphql_name
+    id
+    lat
+    lng
+    name
+    prefecture_id
+    status
+    town
+    updated_at
+  }
+}

@@ -1,0 +1,16 @@
+mutation UpdateGenre($genreUpdateData: GenreInput!, $id: ID!) {
+  update_genre(input: { attributes: $genreUpdateData, id: $id }) {
+    clientMutationId
+    graphql_name
+    returning {
+      content
+      created_at
+      graphql_name
+      icon
+      id
+      name
+      status
+      updated_at
+    }
+  }
+}

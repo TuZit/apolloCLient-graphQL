@@ -1,0 +1,20 @@
+query myProfile {
+  my_profile {
+    id
+    avatar
+    name
+    occupation
+    role
+    email
+    nickname
+    phone_number
+    birthday
+    name_katakana
+    gender
+    active_area_id
+    address
+    organization_id
+    skill_ids
+    language_ids
+  }
+}

@@ -1,0 +1,10 @@
+query qrCode($id: ID!, $type: ID!) {
+  qr_code(id: $id, type: $type) {
+    code
+    created_at
+    graphql_name
+    id
+    status
+    updated_at
+  }
+}

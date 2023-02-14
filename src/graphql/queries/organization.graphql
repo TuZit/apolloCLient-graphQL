@@ -1,0 +1,6 @@
+query Organization {
+  organizations(limit: 9999) {
+    id
+    name
+  }
+}

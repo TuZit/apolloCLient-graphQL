@@ -1,0 +1,10 @@
+query miraiSDG($where: Filter) {
+  mirai_sdgs(where: $where, limit: 9999) {
+    created_at
+    graphql_name
+    id
+    mirai_id
+    sdg_id
+    updated_at
+  }
+}

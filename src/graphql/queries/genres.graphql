@@ -1,0 +1,6 @@
+query Genres {
+  genres(limit: 9999) {
+    id
+    name
+  }
+}

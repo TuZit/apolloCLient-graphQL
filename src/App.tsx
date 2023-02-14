@@ -14,10 +14,9 @@ function App() {
     loginResult: { data }
   }: any = useSignIn();
 
-  console.log(data);
-
   const login = async ({ username, password }: any) => {
     await loginMutate({ username, password });
+    localStorage.setItem('testEcotoken', data?.sign_in?.token);
 
     return Promise.resolve();
   };
@@ -27,12 +26,17 @@ function App() {
       <Layout>
         <Test name='Test' />
         <form
+          style={{
+            margin: '0 auto',
+            width: '80%'
+          }}
           onSubmit={(e) => {
             e.preventDefault();
             login(loginForm);
           }}>
           <div>
             <label>Email</label>
+            <br />
             <input
               type='text'
               onChange={(e) =>
@@ -47,6 +51,7 @@ function App() {
           </div>
           <div>
             <label>Pass</label>
+            <br />
             <input
               type='text'
               onChange={(e) =>

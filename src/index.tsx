@@ -1,13 +1,20 @@
-import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
+import {
+  ApolloClient,
+  ApolloLink,
+  ApolloProvider,
+  InMemoryCache,
+  createHttpLink
+} from '@apollo/client';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 import { setContext } from '@apollo/client/link/context';
 
-export const TOKEN_KEY = 'ECO_EITO/token';
+export const TOKEN_KEY = 'testEcotoken';
 
 const httpLink = createHttpLink({
-  uri: process.env.REACT_APP_GRAPHQL_URL
+  uri: 'https://eco-api.its-globaltek.com/api/v1/admin',
+  credentials: 'include'
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -33,7 +40,7 @@ const authLink = setContext((_, { headers }) => {
 });
 
 export const apolloClient = new ApolloClient({
-  link: authLink.concat(httpLink),
+  link: ApolloLink.from([authLink, httpLink]),
   cache: new InMemoryCache()
 });
 
